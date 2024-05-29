@@ -11,6 +11,9 @@ vim.g.have_nerd_font = true
 -- set COLORSCHEME
 -- vim.cmd.colorscheme 'rose-pine'
 
+-- set vim builtin explorer style
+-- vim.cmd 'let g:netrw_liststyle = 3'
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
