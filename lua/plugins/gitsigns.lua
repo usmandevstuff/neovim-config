@@ -1,7 +1,3 @@
--- Adds git related signs to the gutter, as well as utilities for managing changes
--- NOTE: gitsigns is already included in init.lua but contains only the base
--- config. This will add also the recommended keymaps.
-
 return {
   {
     'lewis6991/gitsigns.nvim',
@@ -51,7 +47,7 @@ return {
         map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
         map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
         map('n', '<leader>hS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
-        map('n', '<leader>hu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
+        map('n', '<leader>hu', gitsigns.stage_hunk, { desc = 'git [u]ndo stage hunk' })
         map('n', '<leader>hR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
         map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
         map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
@@ -61,25 +57,7 @@ return {
         end, { desc = 'git [D]iff against last commit' })
         -- Toggles
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
-        map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
-      end,
-    },
-    { -- Useful plugin to show you pending keybinds.
-      'folke/which-key.nvim',
-      event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-      config = function() -- This is the function that runs, AFTER loading
-        require('which-key').setup()
-
-        -- Document existing key chains
-        require('which-key').add {
-          { '<leader>c', group = '[C]ode' },
-          { '<leader>d', group = '[D]ocument' },
-          { '<leader>r', group = '[R]ename' },
-          { '<leader>s', group = '[S]earch' },
-          { '<leader>w', group = '[W]orkspace' },
-          { '<leader>t', group = '[T]oggle' },
-          { '<leader>h', group = 'Git [H]unk' },
-        }
+        map('n', '<leader>tD', gitsigns.preview_hunk_inline, { desc = '[T]oggle git show [D]eleted' })
       end,
     },
   },

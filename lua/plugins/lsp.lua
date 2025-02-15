@@ -4,6 +4,7 @@ return {
     'stevearc/conform.nvim',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
@@ -12,6 +13,7 @@ return {
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'j-hui/fidget.nvim',
+    { 'folke/neodev.nvim', opts = {} },
   },
 
   config = function()
@@ -87,6 +89,7 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
+        { name = 'path' }, -- For path users.
       }, {
         { name = 'buffer' },
       }),
@@ -98,7 +101,8 @@ return {
         focusable = false,
         style = 'minimal',
         border = 'rounded',
-        source = 'always',
+        source = true,
+        -- source = 'always',
         header = '',
         prefix = '',
       },
