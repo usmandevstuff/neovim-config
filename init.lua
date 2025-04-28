@@ -1,7 +1,6 @@
 require 'options'
 require 'keymaps'
 
-
 local augroup = vim.api.nvim_create_augroup
 local UsmanDevGroup = augroup('UsmanDevStuff', {})
 
