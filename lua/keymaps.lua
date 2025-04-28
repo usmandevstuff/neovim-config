@@ -3,6 +3,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- file explorer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '\\', vim.cmd.Ex)
 
 -- create empty line without insert
 -- vim.keymap.set('n', 'oo', 'o<Esc>')
