@@ -7,6 +7,15 @@ function ColorMyPencils(color)
 end
 
 return {
+  {
+    "rebelot/kanagawa.nvim",
+  },
+  {
+    "jeffkreeftmeijer/vim-dim",
+  },
+  {
+    "vague2k/vague.nvim",
+  },
 
   {
     'erikbackman/brightburn.vim',

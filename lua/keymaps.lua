@@ -1,5 +1,3 @@
--- no search highlight
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- file explorer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
